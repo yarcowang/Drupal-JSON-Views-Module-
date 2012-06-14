@@ -1,0 +1,18 @@
+name = Views Json Backend
+description = Adds a views backend to query Json files.
+package = Views
+dependencies[] = views
+core = 7.x
+
+files[] = views_json_backend_plugin_query_json.inc
+; Handlers
+files[] = handlers/views_json_backend_handler_field.inc
+files[] = handlers/views_json_backend_handler_filter.inc
+files[] = handlers/views_json_backend_handler_sort.inc
+
+; Information added by drupal.org packaging script on 2012-05-23
+version = "7.x-0.1-alpha"
+core = "7.x"
+project = "views_json_backend"
+datestamp = "1339648642"
+
