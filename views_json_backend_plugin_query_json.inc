@@ -15,8 +15,11 @@ class views_json_backend_plugin_query_json extends views_plugin_query {
    */
   function query($get_count = FALSE) {
     $filters = array();
-		foreach ($this->filter as $filter) {
-			$filters[] = $filter->generate();
+		
+		if (isset($this->filter)) {
+			foreach ($this->filter as $filter) {
+				$filters[] = $filter->generate();
+			}
 		}
     /**
      * @todo Add an option for the filters to be 'and' or 'or'.
